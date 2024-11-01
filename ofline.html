@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Status Checker</title>
+</head>
+<body>
+    <button id="statusCheck">Check Status</button>
+    <script>
+        console.log('Initially ' + (window.navigator.onLine ? 'on' : 'off') + 'line');
+        
+        window.addEventListener('online', () => console.log('Became online'));
+        window.addEventListener('offline', () => console.log('Became offline'));
+
+        document.getElementById('statusCheck').addEventListener('click', () => {
+            console.log('window.navigator.onLine is ' + window.navigator.onLine);
+          
+        });
+    </script>
+</body>
+</html>
+ 
